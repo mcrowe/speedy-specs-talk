@@ -7,11 +7,14 @@ Profiler says:
 Observers:
   - Usually "asides" (not part of primary business logic)
   - Often expensive
-  - e.g. User#create => send emails, create background jobs, etc.
+  - e.g. Create a user => send emails, create background jobs, etc.
 
 Solution:
   - Disable observers by default
   - Whitelist observers as needed
+
+Result:
+  - 10% improvement
 
 ```ruby
 # Gemfile

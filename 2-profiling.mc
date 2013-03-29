@@ -1,14 +1,16 @@
 PROFILING:
 
-Method 1 (Ineffective):
+Method 1:
   - Find slowest specs (e.g. rspec --profile)
   - Attack slowest specs one-by-one
-  - Low return (individual specs are negligable in large suite).
+  - => Incremental returns
+       (individual specs negligable in large suite)
 
-Method 2 (Effective):
-  - Find where *entire* suite spends most of its time
+Method 2:
+  - Find where *entire* suite spends most time
   - Profile entire suite => hot spots
-  - Found a single method that takes 30% of the time of our entire suite.
+  - => Massive returns
+       (Found a single method that takes 30% of the time of our entire suite)
 
 ```ruby
 # Gemfile

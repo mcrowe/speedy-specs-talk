@@ -1,7 +1,8 @@
 FIXTURES:
 
 Profiler says:
-  - Creating same records again and again and again (e.g. Roles, SubscriptionPlans)
+  - Creating same records again and again and again
+    (e.g. Roles, SubscriptionPlans)
 
 Creating records for specs:
   - Factories => flexible
@@ -12,6 +13,9 @@ Creating records for specs:
 Solution:
   - Fixtures and transactional cleanup for common data
   - Factories for test-specific data
+
+Result:
+  - 40% improvement
 
 ```ruby
 # spec/seeds.rb
@@ -31,7 +35,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
 
     # Load spec seeds only once per run.
-    load 'request_spec/seeds.rb'
+    load 'spec/seeds.rb'
   end
 
 end

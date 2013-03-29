@@ -9,6 +9,9 @@ Solution:
   - Process bloats in memory if off completely
   - Compromise
 
+Result:
+  - 40% improvement
+
 ```ruby
 # garbage_sweeper.rb
 #

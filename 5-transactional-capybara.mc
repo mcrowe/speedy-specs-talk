@@ -1,10 +1,10 @@
-TRANSACTIONAL CLEANUP WITH CAPYBARA:
+TRANSACTIONAL CLEAN-UP WITH CAPYBARA:
 (Jose Valim: http://blog.plataformatec.com.br/2011/12/three-tips-to-improve-the-performance-of-your-test-suite/)
 
 Profiler says:
-  - Database truncation between specs is slow
+  - Database clean-up between specs is slow
 
-Clean up:
+Clean-up:
   - Required after every spec
   - Transactions => FAST
   - Truncation => SLOW
@@ -16,6 +16,9 @@ Capybara:
 Solution:
   - Force ActiveRecord to use same connection in all threads
   - Use Transactions!
+
+Result:
+  - 10% improvement
 
 ```ruby
 # spec_helper.rb
