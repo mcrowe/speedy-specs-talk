@@ -1,18 +1,17 @@
-GARBAGE COLLECTION:
-(Peter Cooper: http://www.rubyinside.com/careful-cutting-to-get-faster-rspec-runs-with-rails-5207.html)
+# GARBAGE COLLECTION:
+# (Peter Cooper: http://www.rubyinside.com/careful-cutting-to-get-faster-rspec-runs-with-rails-5207.html)
+#
+# Profiler says:
+#   - Garbage collection is slow
+#
+# Solution:
+#   - Stop garbage collection?
+#   - Process bloats in memory if off completely
+#   - Compromise
+#
+# Result:
+#   - 40% improvement
 
-Profiler says:
-  - Garbage collection is slow
-
-Solution:
-  - Stop garbage collection?
-  - Process bloats in memory if off completely
-  - Compromise
-
-Result:
-  - 40% improvement
-
-```ruby
 # garbage_sweeper.rb
 #
 class GarbageSweeper
@@ -49,4 +48,3 @@ RSpec.configure do |config|
   end
 
 end
-```
